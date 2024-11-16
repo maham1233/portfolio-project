@@ -1,0 +1,271 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(34, 34, 34); /* Set the background color of the whole page to black */
+    color: #fff; /* Set the text color to white for contrast */
+}
+
+/* Header */
+header {
+    background-color: #333; /* Darker header for contrast */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Padding inside the link */
+    display: inline-block; /* To allow padding and background */
+    border-radius: 5px; /* Rounded corners for normal state */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    position: relative; /* To position the background */
+}
+
+.nav-links a:hover {
+    color: #fff; /* Keep text white on hover */
+    background-color: #ff6600; /* Background color on hover (vibrant red) */
+    transform: scale(1.05); /* Slight zoom effect */
+    border-radius: 8px; /* Rounded corners on hover */
+}
+
+/* Optional: Add an extra effect for the background */
+.nav-links a::before {
+    content: ''; /* Empty content to create a pseudo-element */
+    position: absolute; /* Position relative to the link */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff6600; /* Background color */
+    border-radius: 8px; /* Round the corners of the background */
+    z-index: -1; /* Place it behind the text */
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    transform: scale(1.05); /* Slight zoom effect on the background */
+}
+
+
+/* Profile Section */
+#profile {
+    padding: 10rem;
+    background-color: black; /* Darker background for profile section */
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem; /* Add space between the image and text */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-img {
+    width: 350px; /* Set the width to control image size */
+    height: 350px; /* Set the height to ensure it's square */
+    border-radius: 5%; /* Make the image round */
+    object-fit: cover; /* Ensure the image fills the circle without stretching */
+    border: 2px solid #ff6600; /* Vibrant orange border around the profile image */
+}
+
+.profile-text h2 {
+    color: #ff6600; /* Vibrant orange for the name */
+    margin: 0;
+    font-size: 2rem;
+}
+
+.profile-text p {
+    color: #ccc; /* Light gray for the description */
+    font-size: 1.1rem;
+}
+
+
+/* About Section */
+#work, #contact {
+    padding: 2rem;
+    text-align: center;
+}
+
+ #work h2, #contact h2 {
+    color: #ff6600; /* Vibrant orange for section headers */
+}
+
+/* Work Gallery */
+/* Work Gallery */
+.work-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.work-item {
+    background: #333; /* Dark background for work items */
+    padding: 1rem;
+    border-radius: 8px;
+    width: 350px; /* Adjust the width of each work item */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; /* Ensure no content spills out */
+}
+
+.work-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    /* Vibrant orange on hover */
+    color: white;
+}
+
+.work-img {
+    width: 100%; /* Make the image take full width of the container */
+    height: 280px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image fills the div without stretching */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+/* Center the section content */
+#project {
+    text-align: center; /* Center the text inside the section */
+    width: 100%; /* Set a width to control the section's size */
+}
+.project-img {
+    padding-left: 2%;
+    width: 800px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    object-fit: cover; /* Ensures the image doesn't stretch */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    margin-bottom: 1.5rem; /* Spacing below the image */
+}
+
+.work-item h3 {
+    color: #fff; /* White color for the project title */
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.work-item p {
+    color: #ccc; /* Light gray color for the project description */
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Work Item Button */
+.try-it-out-btn {
+    display: inline-block;
+    background-color: #ff6600; /* Vibrant orange button */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline from link */
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.try-it-out-btn:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    
+}
+
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Styling for the background container of the form */
+.contact-form-background {
+    background-color: rgb(83, 79, 79); /* White background */
+    padding: 2rem;
+    border-radius: 10px; /* Optional: rounded corners for the background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: soft shadow around the background */
+    max-width: 600px; /* Optional: sets a max width */
+    margin: 0 auto; /* Centers the form container */
+}
+
+/* Styling the actual form */
+.contact-form-container form {
+    display: flex;
+    flex-direction: column; /* Stack the form elements vertically */
+    gap: 1rem; /* Adds space between form elements */
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #222;
+    border-radius: 5px;
+    background-color: #ddd; /* Dark background for form inputs */
+    color: white;
+}
+
+form input,
+form textarea {
+    border: 1px solid #3a3430; /* Vibrant border for form elements */
+}
+
+form button {
+    margin-left: 2%;
+    background-color: #ff6600; /* Vibrant orange button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem; /* Slightly larger button text */
+}
+
+form button:hover {
+    background-color: #ff3333; /* Red on hover */
+}
+
+/* Optional: Styling the labels */
+form label {
+    font-size: large;
+    font-weight: bold;
+    
+    color: #dfd6d6; /* Dark text for labels */
+}
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333; /* Dark footer */
+    color: #fff;
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Ensures content has enough space for footer */
+main {
+    flex: 1;
+}
